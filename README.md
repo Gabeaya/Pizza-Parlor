@@ -22,3 +22,10 @@ Test:  "The function should add $2.00 per topping."
 Code:
 testPizza.toppingsPrice();
 Expected Output: $6.00
+
+Describe: totalPrice()
+
+Test: "This function should perform both the toppingsPrice and sizePrice functions while also adding both of there outputs to get the total pizza price."
+Code:
+testPizza.totalPrice();
+Expected Output: "31"
