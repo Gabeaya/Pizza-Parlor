@@ -4,17 +4,14 @@ function Pizza(toppings, size) {
 }
 let testPizza = new Pizza(["pepperoni", "bellpeppers","garlic drizzle"], "Earthling");
 
-Pizza.prototype.toppingsPrice = function() {
+Pizza.prototype.totalPrice = function() {
   let toppingsPrice = 0;
-
+  let sizePrice =0;
+  
   for(let i = 0; i <this.toppings.length; i++ ) {
     toppingsPrice += 2;
   };
-  return toppingsPrice;
-}
-
-Pizza.prototype.sizePrice = function() {
-  let sizePrice =0;
+  
   if(this.size === 'Multidimensional') {
     sizePrice = 70;
   } else if(this.size === 'Universal') {
@@ -24,13 +21,7 @@ Pizza.prototype.sizePrice = function() {
   } else if(this.size === 'Earthling') {
     sizePrice = 25.00;
   }
-  
-}
-
-
-Pizza.prototype.totalPrice = function() {
   return (toppingsPrice + sizePrice);
-
 }
 
 testPizza.totalPrice();
