@@ -6,3 +6,19 @@ let testPizza = new Pizza(['pepperoni', 'bellpeppers'], 'large');
 testPizza
 Expected Output:
 >Pizza {toppings: Array(2), size:"Large"}
+
+
+Describe: sizePrice()
+
+Test: "It should call on an instance of the pizza objects, and return a price(string) based on the inputted size."
+Code: 
+testPizza.sizePrice();
+Expected Output: "25.00"
+
+
+Describe: toppingsPrice()
+
+Test:  "The function should add $2.00 per topping."
+Code:
+testPizza.toppingsPrice();
+Expected Output: $6.00
