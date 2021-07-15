@@ -7,3 +7,29 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Pizza Parlor</title>
 </head>
+<body>
+  <div class="container">
+    <div class="jumbtron">
+      <h1>Pizza Planet</h1>
+      <p>Welcome to Pizza planet where we provide the largest and most dangerous pizzas.</p>
+    </div>
+  </div>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <h4>Select Your Desired Toppings ($2.00 per Topping)</h4>
+        <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni 
+        <input type="checkbox" name="toppings" value="sausage"> Sausage 
+        <input type="checkbox" name="toppings" value="bacon"> Bacon 
+        <input type="checkbox" name="toppings" value="pepperoni"> BellPeppers
+        <input type="checkbox" name="toppings" value="sausage"> Mushrooms
+        <input type="checkbox" name="toppings" value="bacon"> Pineapple
+      </div>
+      <button type="submit" class="btn btn-danger">Price!</button>
+    </form>
+    <div class="hidden-price">
+      <p>Your total comes to : $<span id="price"></span></p>
+    </div>
+  </div>
+    
+</body>
