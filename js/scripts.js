@@ -2,8 +2,6 @@ function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
 }
-let testPizza = new Pizza(["pepperoni", "bellpeppers","garlic drizzle"], "Earthling");
-
 Pizza.prototype.totalPrice = function() {
   let toppingsPrice = 0;
   let sizePrice =0;
@@ -24,5 +22,12 @@ Pizza.prototype.totalPrice = function() {
   return (toppingsPrice + sizePrice);
 }
 
-testPizza.totalPrice();
-
+$(document).ready(function() {
+  $('form').submit(function(e) {
+    e.preventDefault();
+    const toppings = $('input[name="toppings"]:checked').map(function() {
+      return $(this).val();
+    }).get(); //we laced a function within our map.prototype.get() method
+    console.log(toppings);
+  });
+});
