@@ -11,11 +11,11 @@
   <div class="container">
     <div class="jumbtron">
       <h1>Pizza Planet</h1>
-      <p></p>
+      <p>Welcome to Pizza Planet</p>
     </div>
   </div>
   <div class="container">
-    <form>
+    <form id="pizza-order">
       <div class="form-group">
         <h4>Select Your Desired Toppings ($2.00 per Topping)</h4>
         <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni 
@@ -29,10 +29,11 @@
       <div class="form-group">
         <h4>Select Size</h4>
         <select id="size">
-          <option name="size" value="earthling">Earthling(10 slices)</option>
-          <option name="size" value="galactic">Galactic(16 slices)</option>
-          <option name="size" value="Universe">Universe(24 slices)</option>
-          <option name="size" value="Multidimension">Multidimension(30 slices</option>
+          <option name="size" value: disabled selected>Select size</option>
+          <option name="size" value="Earthling">Earthling(10 slices)</option>
+          <option name="size" value="Galactic">Galactic(16 slices)</option>
+          <option name="size" value="Universal">Universe(24 slices)</option>
+          <option name="size" value="Multidimensional">Multidimension(30 slices)</option>
         </select>
       </div>
       <h7> <b>Earthling:</b> $25.00  <b>Galactic:</b> $40.00  <b>Universe:</b> $55.00  <b>Multidimension:</b> $70.00</h7>
@@ -43,5 +44,6 @@
       <p>Your total comes to : $<span id="total"></span></p>
     </div>
   </div>
+  
     
 </body>
