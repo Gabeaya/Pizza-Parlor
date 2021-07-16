@@ -29,5 +29,8 @@ $(document).ready(function() {
       return $(this).val();
     }).get(); //we laced a function within our map.prototype.get() method
     console.log(toppings);
+    const size = $("#size").val();
+    console.log(size);
+
   });
 });
