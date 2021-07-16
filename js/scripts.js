@@ -5,7 +5,7 @@ function Pizza(toppings, size) {
 Pizza.prototype.totalPrice = function() {
   let toppingsPrice = 0;
   let sizePrice =0;
-  
+  let sizeCheck = "Please select a size";
   for(let i = 0; i <this.toppings.length; i++ ) {
     toppingsPrice += 2;
   };
@@ -18,19 +18,25 @@ Pizza.prototype.totalPrice = function() {
     sizePrice = 40.00;
   } else if(this.size === 'Earthling') {
     sizePrice = 25.00;
+
   }
-  return (toppingsPrice + sizePrice);
+  return toppingsPrice + sizePrice;
+ 
 }
 
 $(document).ready(function() {
-  $('form').submit(function(e) {
+  $("#pizza-order").submit(function(e) {
     e.preventDefault();
     const toppings = $('input[name="toppings"]:checked').map(function() {
       return $(this).val();
     }).get(); //we laced a function within our map.prototype.get() method
-    console.log(toppings);
     const size = $("#size").val();
-    console.log(size);
 
+    const order = new Pizza(toppings, size);
+
+    const price = (order.totalPrice());
+    console.log(price);
+    $('#total').html(price);
+    $('.hidden-price').show();
   });
 });
