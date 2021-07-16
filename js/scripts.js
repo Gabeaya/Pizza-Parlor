@@ -18,7 +18,8 @@ Pizza.prototype.totalPrice = function() {
     sizePrice = 40.00;
   } else if(this.size === 'Earthling') {
     sizePrice = 25.00;
-
+  } else {
+    alert (sizeCheck);
   }
   return toppingsPrice + sizePrice;
  
