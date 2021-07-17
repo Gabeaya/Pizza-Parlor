@@ -48,7 +48,7 @@ testPizza.totalPrice();
 Expected Output: "31"
 
 ## Setup/Installation Requirements 
-* Clone github repo `https://github.com/Gabeaya/Pizza-Code-Review`:
+* Clone github repo `https://github.com/Gabeaya/Pizza-Parlor`:
 * Navigate to directory `pizza-parlor`
 * Open `index.html` in your browser.
 * Input choices.
