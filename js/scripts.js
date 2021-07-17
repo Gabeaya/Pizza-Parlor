@@ -22,7 +22,6 @@ Pizza.prototype.totalPrice = function() {
     alert (sizeCheck);
   }
   return toppingsPrice + sizePrice;
- 
 }
 
 $(document).ready(function() {
